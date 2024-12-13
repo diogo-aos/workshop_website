@@ -46,4 +46,4 @@ No ano 24/25, foram conduzidas 7 dissertações:
 
 
 
-Das peças desenhadas que estão no repositório, quero chamar à atenção desta [peça super xpto incrivel que desenhei](../peca_xpto.stl).
+Das peças desenhadas que estão no repositório, quero chamar à atenção desta [peça super xpto incrivel que desenhei](https://github.com/diogo-aos/workshop_website/raw/refs/heads/main/peca_xpto.stl).
