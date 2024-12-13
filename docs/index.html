@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -103,9 +83,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#impact-of-synthetic-images-in-the-training-of-neural-networks-for-airborne-vessel-segmentation" id="toc-impact-of-synthetic-images-in-the-training-of-neural-networks-for-airborne-vessel-segmentation" class="nav-link active" data-scroll-target="#impact-of-synthetic-images-in-the-training-of-neural-networks-for-airborne-vessel-segmentation">Impact of Synthetic Images in the Training of Neural Networks for Airborne Vessel Segmentation</a></li>
-  <li><a href="#examples-from-blender" id="toc-examples-from-blender" class="nav-link" data-scroll-target="#examples-from-blender">Examples from Blender</a></li>
-  <li><a href="#examples-from-gaugan" id="toc-examples-from-gaugan" class="nav-link" data-scroll-target="#examples-from-gaugan">Examples from GauGAN</a></li>
+  <li><a href="#teses-do-ciafa---ta" id="toc-teses-do-ciafa---ta" class="nav-link active" data-scroll-target="#teses-do-ciafa---ta">Teses do CIAFA - TA</a></li>
   </ul>
 </nav>
     </div>
@@ -116,9 +94,9 @@ div.csl-indent {
 
 
 <p><img src="header.png" class="img-fluid" width="800"></p>
-<section id="impact-of-synthetic-images-in-the-training-of-neural-networks-for-airborne-vessel-segmentation" class="level1" style="text-align: center">
-<h1>Impact of Synthetic Images in the Training of Neural Networks for Airborne Vessel Segmentation</h1>
-<p><strong>Francisco Matilde, Gonçalo Cruz, Diogo Silva</strong></p>
+<section id="teses-do-ciafa---ta" class="level1" style="text-align: center">
+<h1>Teses do CIAFA - TA</h1>
+<p><strong>TC Gonçalves, CAP Silva, CAP Anna, TEN Coelho</strong></p>
 <p><img src="fap_afa.png" class="img-fluid" width="400"></p>
 </section>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -131,52 +109,32 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Automation scripts for Blender and other utilities used in the development of this work can be found in the official <a href="https://github.com/ciafa-sw/synthetic_vessel_detection">Github repository</a>.</p>
+<p>O código, ficheiros de configuração e desenhos de peças estão disponíveis neste <a href="https://github.com/diogo-aos/workshop_website">repositério do Github</a>.</p>
 </div>
 </div>
-<p>Synthetic images have appeared as a possible solution to the scarcity of real images for training neural networks. We investigate their use in the training of ship detectors in aerial imagery. We create a synthetic dataset through 2 distinct methods: modeling and rendering with Blender, and a learning-based approach with GauGAN. YOLACT++ was chosen as the detector and its performance was evaluated when synthetic images were included in its training. The results suggest that synthetic augmentations can improve a model’s performance, under certain conditions. Adding synthetic data to large training sets degraded performance on the target domain, but significantly improved it on small datasets.</p>
+<p>Tecnologias Aeronáuticas é uma área cientifica onde os alunos do 5º ano PILAV podem trabalhar nas suas dissertações de mestrado.</p>
 <hr>
-<p>Images from <a href="https://vislab.isr.ist.utl.pt/seagull-dataset/">Seagull dataset</a> <span class="citation" data-cites="seagull2017"><a href="#ref-seagull2017" role="doc-biblioref">[1]</a></span> were used for the test set. These are aerial images of vessels, which represent our target scenario. Our setup was under the assumption that we didn’t have enough data for our target scenario. To adress this, we simulated our target scenario with Blender and also used real images from a related domain, i.e.&nbsp;satellite imagery from Airbus Ship Detection Challenge <span class="citation" data-cites="airbus-ship-detection"><a href="#ref-airbus-ship-detection" role="doc-biblioref">[2]</a></span>. We also used GauGAN to produce synthetic images from the related domain. We didn’t use generated GauGAN images for the target domain in the training set, as we had very little images and the generated images were fairly similar.</p>
+<p>No ano 24/25, foram conduzidas 7 dissertações:</p>
+<ul>
+<li>Simulador com MR</li>
+<li>Cruzento de deteções de embarações com SATIM e AIS</li>
+<li>Localização de UAV s/ GNSS</li>
+<li>Deteção de pessoas em ambientes SAR e patrulhamento</li>
+<li>Construção de uma bancada de testes</li>
+<li>Deteção de anomalias em voo do OGASSA</li>
+<li>Conceito de defesa aérea contra UAV e swarms</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/final_sample.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>Sample of data used for detector training.</figcaption>
+<p><img src="img/grupo.jpg" class="img-fluid figure-img" width="400"></p>
+<figcaption>Equipa com F-16</figcaption>
 </figure>
 </div>
-<p>Our Blender generation process aimed to extend the methodology adopted in the production of the <a href="https://vislab.isr.tecnico.ulisboa.pt/marsyn-dataset/">MarSyn dataset</a> <span class="citation" data-cites="marsyn2022"><a href="#ref-marsyn2022" role="doc-biblioref">[3]</a></span>, by automating many tasks.</p>
-<section id="examples-from-blender" class="level2">
-<h2 class="anchored" data-anchor-id="examples-from-blender">Examples from Blender</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/blender.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>Image-segmentation pairs from Blender generated images.</figcaption>
-</figure>
-</div>
-</section>
-<section id="examples-from-gaugan" class="level2">
-<h2 class="anchored" data-anchor-id="examples-from-gaugan">Examples from GauGAN</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/gaugan.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>Image-segmentation pairs from GauGAN generated images.</figcaption>
-</figure>
-</div>
+<p>Das peças desenhadas que estão no repositório, quero chamar à atenção desta <a href="../peca_xpto.stl">peça super xpto incrivel que desenhei</a>.</p>
 
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-seagull2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. Ribeiro, G. Cruz, J. Matos, and A. Bernardino, <span>“A data set for airborne maritime surveillance environments,”</span> <em>IEEE Transactions on Circuits and Systems for Video Technology</em>, vol. 29, no. 9, pp. 2720–2732, 2017.</div>
-</div>
-<div id="ref-airbus-ship-detection" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M. inversion Jeff Faudi, <span>“Airbus ship detection challenge.”</span> Kaggle, 2018. Available: <a href="https://kaggle.com/competitions/airbus-ship-detection">https://kaggle.com/competitions/airbus-ship-detection</a></div>
-</div>
-<div id="ref-marsyn2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. Ribeiro, B. Damas, and A. Bernardino, <span>“Real-time ship segmentation in maritime surveillance videos using automatically annotated synthetic datasets,”</span> <em>Sensors</em>, vol. 22, p. 8090, Oct. 2022, doi: <a href="https://doi.org/10.3390/s22218090">10.3390/s22218090</a>.</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
